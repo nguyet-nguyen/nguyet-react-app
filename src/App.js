@@ -1,9 +1,10 @@
 import './App.scss';
+import LoginForm from './components/LoginForm';
 function App() {
   return (
-    <span className="text-3xl font-bold underline">
-    <p>Hello world!</p>
-  </span>
+   <div>
+     <LoginForm/>
+   </div>
   );
 }
 
