@@ -37,8 +37,8 @@ const LoginForm = () => {
                     placeholder="email"
                     {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i })}
                   />
-                  {errors.email && errors.email.type === 'required' && <p className="text-red-500 text-xs italic">Value required</p>}
-                  {errors.email && errors.email.type === 'pattern' && <p className="text-red-500 text-xs italic">Invalid email</p>}
+                  {errors.email && errors.email.type === 'required' && <p className="text-red-500 text-xs mt-1">Value required</p>}
+                  {errors.email && errors.email.type === 'pattern' && <p className="text-red-500 text-xs mt-1">Invalid email</p>}
                 </label>
                 <label className="block mt-4 text-sm">
                   <span className="text-gray-700 dark:text-gray-400">Password</span>
@@ -52,12 +52,12 @@ const LoginForm = () => {
                     placeholder="Password"
                     {...register("passWord", { required: true, maxLength: 20 })}
                   />
-                  {errors.passWord && errors.passWord.type === "required" && <p className="text-red-500 text-xs italic">value required</p>}
-                  {errors.passWord && errors.passWord.type === 'maxLength' && <p className="text-red-500 text-xs italic">no more than 20 characters</p>}
+                  {errors.passWord && errors.passWord.type === "required" && <p className="text-red-500 text-xs mt-1">value required</p>}
+                  {errors.passWord && errors.passWord.type === 'maxLength' && <p className="text-red-500 text-xs mt-1">no more than 20 characters</p>}
                 </label>
                 <button
                   className="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors 
-                  duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 
+                  duration-150 bg-purple-500 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 
                   focus:outline-none focus:shadow-outline-purple"
                   type="submit">
                   Login
